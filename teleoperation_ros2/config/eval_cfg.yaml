@@ -1,0 +1,6 @@
+device: cuda
+xarm_ip: 10.18.18.101
+u2d2_port: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT94VPII-if00-port0
+pretrained_policy_path: /home/xiaohang_shi/Project/lerobot/output/train/pick_place/diffusion_01/checkpoints/100000/pretrained_model
+fps: 10
+obs_dim: 4

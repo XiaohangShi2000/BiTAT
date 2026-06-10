@@ -1,0 +1,18 @@
+codebase_version: v2.1
+root: /home/xiaohang_shi/.cache/huggingface/lerobot
+repo_id: tele_vtrm/peeling_fixed
+task_description: Peel a cucumber.
+robot_type: xarm6
+single_freedom: 7
+total_freedom: 14
+fps: 10
+cam_shape: [480, 640, 3]
+video_codec: h264
+video_pix_fmt: yuv420p
+num_writers_per_image: 2
+num_cam: 1
+num_tac: 4
+resume: true
+remove_images: false
+# override: false
+# override_ep_index: 0

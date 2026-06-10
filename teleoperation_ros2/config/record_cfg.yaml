@@ -1,0 +1,14 @@
+codebase_version: v2.1
+root: /home/xiaohang_shi/.cache/huggingface/lerobot
+repo_id: tele_vtrm/diffusion_test_1
+task_description: pick a plate and put down.
+robot_type: xarm6
+total_freedom: 7
+fps: 10
+cam_shape: [480, 640, 3]
+video_codec: h264
+video_pix_fmt: yuv420p
+num_writers_per_image: 2
+num_cam: 1
+num_tac: 2
+resume: false

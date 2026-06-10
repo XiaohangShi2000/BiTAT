@@ -1,0 +1,10 @@
+device: cuda
+xarm_ip_r: 10.18.18.101
+u2d2_port_r: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT94VPII-if00-port0
+xarm_ip_l: 10.18.18.102
+u2d2_port_l: /dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT9HDF13-if00-port0
+pretrained_policy_path: /home/xiaohang_shi/Project/lerobot/output/train/peeling/diffusion_15/checkpoints/345000/pretrained_model
+fps: 10
+obs_dim: 6
+# enable_record: true
+record_path: /home/xiaohang_shi/Project/lerobot/output/eval/peeling/diffusion_08
