@@ -3,15 +3,25 @@
 ## 舵机XM430-W350-T
 ### 组件
 MCU
+
 位置传感器
+
 电机
-波特率: 9600~4.5Mbps(默认57600)
+
+波特率: 9600-4.5Mbps(默认57600)
+
 控制算法: PID
-转角精度: 0.088°(12bit，在驱动里0~360°对应0~4095)
+
+转角精度: 0.088°(12bit，在驱动里0-360°对应0-4095)
+
 控制模式: 电流、速度、位置、PWM
+
 [XM430-W350-T/R](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#control-table-data-address)
+
 python API中读到的数据要注意其字节数
+
 为了提高控制频率，将波特率从默认的57600bps提升到了1Mbps
+
 从端夹爪目前用current-based position control mode来避免夹取大而硬的物体时纯位置控制造成的力矩过载问题，最大夹取力可通过设定goal current来调节
 ## 平行夹爪安装问题
 1. 旋转机构上安装轴承的孔偏小
@@ -111,19 +121,33 @@ DH参数在用户手册的附录可查到
 ## 硬件
 ### 相机
 Logitech StreamCam
+
 `v4l2-ctl --list-devices`列出所有摄像头的设备文件
+
 `v4l2-ctl -d /path/to/videoport --list-ctrls`查看摄像头可调节的参数及当前值
+
 `guvcview -d /path/to/videoport`用guvcview启动指定的摄像头
+
 RealSense D435i
+
 `realsense-viewer`启动GUI
+
 `rs-enumerate-devices`查看相机可以设置的RGB/infra/depth参数规格
+
 `ros2 param list`查看可以修改的参数名
+
 [IntelRealSense/realsense-ros: ROS Wrapper for Intel(R) RealSense(TM) Cameras](https://github.com/IntelRealSense/realsense-ros)
+
 RealSense L515(已停产，pyrealsense2和realsense库的版本最高只到2.54.2(要用ros2最高只到2.51.1)，ros2 wrapper最高只到4.51.1)
+
 [Optimizing the Intel RealSense LiDAR Camera L515 Range](https://www.intelrealsense.com/optimizing-the-lidar-camera-l515-range/)
+
 激光波长为860nm(会被太阳光影响，甚至是在室内的窗口旁)，230W depth points per second
+
 调节laser power，receiver gain(远/低反射表面调大，反之调小)
+
 `Low Ambient Light`过滤部分太阳光
+
 镜面反射直接没depth，黑色物体需要离得近(3-4m)
 ## 软件
 1. 执行`rosrun xacro xacro .xacro > .urdf`，把ufactory官方给的xacro文件转成urdf
