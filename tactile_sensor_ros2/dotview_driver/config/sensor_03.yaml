@@ -1,0 +1,16 @@
+/sensor_03/sensor_stream:
+  ros__parameters:
+    ip: "10.18.18.201"
+    channel: 1
+    serial: "03"
+    calibrate: false
+    pub_gray_img: true
+    pub_binary_img: true
+    frame_rate: 20
+
+/sensor_03/feature_extraction:
+  ros__parameters:
+    serial: "03"
+    line_num: 7
+    calibrate: false
+    frame_rate: 20
